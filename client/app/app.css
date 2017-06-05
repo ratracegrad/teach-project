@@ -46,14 +46,21 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  font-family: Raleway, serif;
+}
+
+a {
+  color: #5cb85c;
+  text-decoration: none;
 }
 
 /* Component styles are injected through gulp */
 /* inject:css */
 @import 'account/settings/settings.css';
 @import 'admin/admin.css';
+@import 'home/home.css';
 @import 'main/main.css';
 @import '../components/footer/footer.css';
 @import '../components/modal/modal.css';
+@import '../components/navbar/navbar.css';
 /* endinject */
