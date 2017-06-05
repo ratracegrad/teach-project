@@ -1,0 +1,43 @@
+canvas{
+    display: block;
+    vertical-align: bottom;
+}
+
+#particleJs{
+    width: 100%;
+    height: 100%;
+    background: #2b4360;
+}
+
+.introTitle {
+    margin-top: 75px;
+}
+.introBackground {
+    background: url('/assets/images/background.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+}
+
+.introHeader {
+    font-size: 65px;
+    line-height: 74px;
+    font-weight: 700;
+    position: relative;
+    top: 11%;
+}
+.introSubheader {
+    font-size: 20px;
+    line-height: 33px;
+    font-weight: 400;
+    color: #686868;
+    position: relative;
+    top: 13%;
+}
+.introButton {
+    margin-top: 25px;
+}
+.navButton {
+    margin: 8px 0 0 0;
+}
