@@ -1,3 +1,4 @@
+/*  particleJS styleing */
 canvas {
     display: block;
     vertical-align: bottom;
@@ -10,16 +11,18 @@ canvas {
     position: absolute;
 }
 
-
+/*******************/
+/*  Intro Section  */
+/*******************/
 .introTitle {
     margin-top: 75px;
 }
-.introBackground {
+.introContainer {
     background-size: cover;
     background: #f5f5f5 url('/assets/images/home.jpg') no-repeat center;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 60px);
+    height: 100vh;
 }
 
 .introHeader {
@@ -53,21 +56,19 @@ canvas {
     border-color: #262934;
 }
 
-.learnBackground {
+/****************************************/
+/* What you will learn section styling  */
+/****************************************/
+.learnContainer {
     padding-top: 25px;
     padding-bottom: 75px;
     background: url('/assets/images/learnBackground2.jpg') no-repeat center;
     background-size: cover;
     width: 100%;
-}
-.learnContainer {
-    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
 }
-
 .whiteText {
     color: white;
 }
@@ -77,12 +78,6 @@ canvas {
     font-weight: 700;
     margin-bottom: 20px;
 }
-h3 br {
-    line-height: 1.5;
-}
-h4 {
-    font-weight: 700;
-}
 .learnBox {
     background-color: rgba(111, 111, 111, 0.01);
     background-color: #6f6f6f;
@@ -90,14 +85,9 @@ h4 {
     border-radius: 4px;
 }
 
-.signupBackground {
-    background-size: cover;
-    background: #f5f5f5 url('/assets/images/background.jpg') no-repeat center;
-    display: flex;
-    flex-direction: column;
-    height: calc(100vh - 60px);
-}
-
+/*****************************/
+/*  reviews section styling  */
+/*****************************/
 .reviewContainer {
     padding: 25px 0 50px;
     background: url('/assets/images/concrete-texture.png') repeat center center;
@@ -150,6 +140,18 @@ div.portrait-wrapper {
     -webkit-transition: .5s;
     transition: .5s;
 }
+
+/*****************************************/
+/* meet your instructor section styling  */
+/*****************************************/
+.instructorContainer {
+    padding-top: 25px;
+    padding-bottom: 75px;
+    background: url('/assets/images/learnBackground2.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+}
+
 div.instructorWrapper {
     display: block;
     position: relative;
@@ -168,4 +170,15 @@ div.instructorWrapper {
 .instructorName {
     font-size: 28px;
     font-weight: 700;
+}
+
+/****************************/
+/* signup container styling */
+/****************************/
+.signupContainer {
+    background-size: cover;
+    background: #f5f5f5 url('/assets/images/background.jpg') no-repeat center;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px);
 }

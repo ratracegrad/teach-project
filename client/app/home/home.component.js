@@ -21,8 +21,30 @@ export default angular.module('teachApp.home', [uiRouter])
   .directive('particles', ['$window', function($window) {
     return {
       restrict: 'A',
-      template: '<div class="particleJs" id="particleJs"></div>',
-      link: function(scope, element, attrs, fn) {
+      replace: true,
+      template: `<div class="particleJs" id="particleJs">
+        <div class="container-fluid instructorContainer">
+          <div class="container whiteText">
+            <h1 class="learnTitle text-center">Meet Your Instructor</h1>
+            <div class="row">
+              <div class="col-xs-4">
+                <div class="wrapper">
+                    <div class="instructorWrapper">
+                        <img class="portrait" src="/assets/images/Jennifer-Bland-headshot.jpg" alt="Jennifer Bland" />
+                    </div>
+                </div>
+              </div>
+              <div class="col-xs-8">
+                <h1 class="instructorName">Jennifer Bland</h1>
+                <p class="instructorByline">I am an Entrepreneur. Mountain Climber. Neil Diamond fanatic. Full stack Software Engineer with over 10 years of development experience. MBA grad. World traveler. </p>
+                <p class="instructorByline">I am a Senior Software Developer, specializing in MEAN stack development. I have more than ten years of development experience working for companies like CNN, Coca-Cola and Apple Computer. I am the author of the book “Developing e-Business Applications Using Lotus Domino on the AS/400″, published by IBM.</p>
+            </div>
+    
+            </div>
+          </div>
+        </div>
+    </div>`,
+      link(scope, element, attrs, fn) {
         $window.particlesJS('particleJs', {
           particles: {
             number: {
@@ -126,86 +148,5 @@ export default angular.module('teachApp.home', [uiRouter])
         });
       }
     };
-    // return {
-    //   restrict: 'A',
-    //   replace: true,
-    //   template: '<div class="particleJs" id="particleJs"></div>',
-    //   link: function(scope, element, attrs, fn) {
-    //
-    //     $window.particlesJS('particleJs', {
-    //       "particles": {
-    //         "number": {
-    //           "value": 70,
-    //           "density": {
-    //             "enable": true,
-    //             "value_area": 800
-    //           }
-    //         },
-    //         "color": {
-    //           "value": "#e7e7e7"
-    //         },
-    //         "shape": {
-    //           "type": "circle",
-    //           "stroke": {
-    //             "width": 0,
-    //             "color": "#e7e7e7"
-    //           },
-    //           "polygon": {
-    //             "nb_sides": 7
-    //           },
-    //           "image": {
-    //             "src": "img/github.svg",
-    //             "width": 100,
-    //             "height": 100
-    //           }
-    //         },
-    //         "opacity": {
-    //           "value": 0.3,
-    //           "random": false,
-    //           "anim": {
-    //             "enable": false,
-    //             "speed": 1,
-    //             "opacity_min": 0.1,
-    //             "sync": false
-    //           }
-    //         },
-    //         "size": {
-    //           "value": 3,
-    //           "random": true,
-    //           "anim": {
-    //             "enable": false,
-    //             "speed": 40,
-    //             "size_min": 0.1,
-    //             "sync": false
-    //           }
-    //         },
-    //         "line_linked": {
-    //           "enable": true,
-    //           "distance": 150,
-    //           "color": "#e7e7e7",
-    //           "opacity": 0.3,
-    //           "width": 1
-    //         },
-    //         "move": {
-    //           "enable": true,
-    //           "speed": 6,
-    //           "direction": "none",
-    //           "random": false,
-    //           "straight": false,
-    //           "out_mode": "out",
-    //           "bounce": false,
-    //           "attract": {
-    //             "enable": false,
-    //             "rotateX": 600,
-    //             "rotateY": 1200
-    //           }
-    //         }
-    //       },
-    //       "interactivity": {},
-    //       "retina_detect": true
-    //     });
-    //
-    //   }
-    // };
   }])
   .name;
