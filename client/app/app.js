@@ -24,6 +24,7 @@ import main from './main/main.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
 
+
 import './app.css';
 
 angular.module('teachApp', [ngCookies, ngResource, ngSanitize, uiRouter, uiBootstrap, _Auth,
