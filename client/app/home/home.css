@@ -1,9 +1,9 @@
-canvas{
+canvas {
     display: block;
     vertical-align: bottom;
 }
 
-#particleJs{
+#particleJs {
     width: 100%;
     height: 100%;
     background: #2b4360;
@@ -100,7 +100,7 @@ h4 {
 
 .reviewContainer {
     padding: 25px 0 50px;
-    background: url('/assets/images/concrete-texture.png') repeat center;
+    background: url('/assets/images/concrete-texture.png') repeat center center;
     background-size: cover;
 }
 .reviewBox {

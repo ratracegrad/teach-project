@@ -18,7 +18,7 @@ export default angular.module('teachApp.home', [uiRouter])
     template: require('./home.html'),
     controller: HomeController
   })
-  .directive('particles', [ '$window', function($window) {
+  .directive('particles', ['$window', function($window) {
     return {
       restrict: 'A',
       template: '<div class="particleJs" id="particleJs"></div>',
@@ -36,7 +36,7 @@ export default angular.module('teachApp.home', [uiRouter])
               value: '#FFFFFF'
             },
             shape: {
-              type: "circle",
+              type: 'circle',
               polygon: {
                 nb_sides: 5
               }
