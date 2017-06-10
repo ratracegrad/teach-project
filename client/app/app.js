@@ -1,7 +1,7 @@
 'use strict';
 
 import angular from 'angular';
-// import ngAnimate from 'angular-animate';
+import ngAnimate from 'angular-animate';
 import ngCookies from 'angular-cookies';
 import ngResource from 'angular-resource';
 import ngSanitize from 'angular-sanitize';
@@ -28,7 +28,7 @@ import util from '../components/util/util.module';
 import './app.css';
 
 angular.module('teachApp', [ngCookies, ngResource, ngSanitize, uiRouter, uiBootstrap, _Auth,
-  account, admin, 'validation.match', navbar, footer, home, main, constants, util
+  account, admin, 'validation.match', navbar, footer, home, main, constants, util, ngAnimate
 ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
