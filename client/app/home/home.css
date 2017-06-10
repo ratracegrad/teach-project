@@ -1,15 +1,4 @@
-/*  particleJS styleing */
-canvas {
-    display: block;
-    vertical-align: bottom;
-}
 
-#particleJs {
-    width: 100%;
-    height: 100%;
-    background: #2b4360;
-    position: absolute;
-}
 
 /*******************/
 /*  Intro Section  */
