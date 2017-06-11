@@ -3,29 +3,22 @@ import uiRouter from 'angular-ui-router';
 import routing from './home.routes';
 
 export class HomeController {
-
+  images = [
+    {
+      src: 'assets/images/slider1.png'
+    },
+    {
+      src: 'assets/images/slider2.png'
+    },
+    {
+      src: 'assets/images/slider3.png'
+    }
+  ];
 
   /*@ngInject*/
-  constructor() {
-    this.images = [
-      {
-        src: 'assets/images/img1.jpg',
-        title: 'Title 1'
-      },
-      {
-        src: 'assets/images/img2.jpg',
-        title: 'Title 2'
-      },
-      {
-        src: 'assets/images/img3.jpg',
-        title: 'Title 3'
-      }
-    ];
-  }
+  constructor() {}
 
-  $onInit() {
-    console.log(this.images);
-  }
+  $onInit() {}
 
 
 }
@@ -47,27 +40,27 @@ export default angular.module('teachApp.home', [uiRouter])
         scope.currentIndex = 0; // Initially the index is at the first image
 
         scope.next = function() {
-          scope.currentIndex < images.length - 1 ? scope.currentIndex++ : scope.currentIndex = 0;
+          scope.currentIndex < scope.images.length - 1 ? scope.currentIndex++ : scope.currentIndex = 0;
         };
 
         scope.prev = function() {
-          scope.currentIndex > 0 ? scope.currentIndex-- : scope.currentIndex = images.length - 1;
+          scope.currentIndex > 0 ? scope.currentIndex-- : scope.currentIndex = scope.images.length - 1;
         };
 
         scope.$watch('currentIndex', function() {
-          images.forEach(function(image) {
+          scope.images.forEach(function(image) {
             image.visible = false; // make every image invisible
           });
 
-          images[scope.currentIndex].visible = true; // make the current image visible
+          scope.images[scope.currentIndex].visible = true; // make the current image visible
         });
 
         let timer;
         const sliderFunc = function() {
           timer = $timeout(function() {
             scope.next();
-            timer = $timeout(sliderFunc, 5000);
-          }, 5000);
+            timer = $timeout(sliderFunc, 2500);
+          }, 2500);
         };
 
         sliderFunc();
